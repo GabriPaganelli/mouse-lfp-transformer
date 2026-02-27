@@ -1,0 +1,47 @@
+============================================================
+Training Summary -- GRU-Transformer LFP Neural Decoder
+============================================================
+Combined dataset shape : (96045, 10, 532)
+Train shape            : (67231, 10, 532)
+Test shape             : (28814, 10, 532)
+Classes (8)            : natural_movie_one_shuffled, spontaneous, gabors,
+                         natural_movie_one_more_repeats, drifting_gratings_75_repeats,
+                         drifting_gratings_contrast, dot_motion, flashes
+
+Class distribution (full dataset):
+  natural_movie_one_shuffled        21000
+  spontaneous                       21000
+  gabors                            21000
+  natural_movie_one_more_repeats    21000
+  drifting_gratings_75_repeats       4200
+  drifting_gratings_contrast         3780
+  dot_motion                         3015
+  flashes                            1050
+
+============================================================
+Training configuration
+============================================================
+  Architecture  : GRU-Transformer (Transformer 1 layer 4 heads; GRU 2 layers)
+  d_model       : 128
+  Optimizer     : Adam  (lr=3e-4, weight_decay=1e-4)
+  Loss          : CrossEntropyLoss (class-weighted, label_smoothing=0.05)
+  Epochs        : 100
+  Batch size    : 64
+  Augmentation  : Gaussian noise (std=0.05) + circular time jitter (prob=0.2)
+
+============================================================
+Results
+============================================================
+  Final test accuracy  : 0.7850  (epoch 100)
+  Best test accuracy   : 0.7987  (epoch 59)
+  Final train loss     : 0.7308
+
+Per-class accuracy at best epoch (epoch 59):
+  natural_movie_one_shuffled      : 0.917
+  gabors                          : 0.885
+  natural_movie_one_more_repeats  : 0.785
+  drifting_gratings_75_repeats    : 0.727
+  spontaneous                     : 0.703
+  flashes                         : 0.632
+  dot_motion                      : 0.610
+  drifting_gratings_contrast      : 0.532

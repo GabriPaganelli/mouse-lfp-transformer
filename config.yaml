@@ -1,0 +1,77 @@
+# =============================================================================
+# config.yaml — GRU-Transformer LFP Neural Decoder
+# =============================================================================
+# Central configuration for all hyperparameters, paths, and training settings.
+# Pass this file to training scripts via --config config.yaml.
+# Override data_dir at runtime with --data-dir if needed.
+# =============================================================================
+
+data:
+  # Path to the directory containing pre-extracted feature .npy files.
+  # These are produced by notebooks/03_feature_extraction.ipynb.
+  data_dir: "/projectnb/cs523aw/students/pangelos/RetreivedData"
+
+  # Allen Brain Observatory session IDs used in this study.
+  sessions:
+    - 767871931
+    - 768515987
+    - 779839471
+    - 778998620
+    - 778240327
+    - 771990200
+    - 771160300
+
+  # Feature file suffix identifying the 7-band, 532-dim, time-binned variant.
+  feature_suffix: "rich532"
+
+  # Fraction of data held out for testing (stratified split).
+  test_size: 0.30
+
+  # Master random seed — controls numpy, torch, and sklearn splits.
+  random_seed: 0
+
+  # Set to true to subsample all classes down to the size of the smallest one
+  # before splitting. Disabled by default; class-weighted loss is used instead.
+  do_balance: false
+
+model:
+  # Hidden dimension shared by the Transformer and GRU layers.
+  d_model: 128
+
+  # Number of self-attention heads in the Transformer encoder layer.
+  n_heads: 4
+
+  # Number of Transformer encoder layers.
+  n_transformer_layers: 1
+
+  # Number of stacked GRU layers.
+  n_gru_layers: 2
+
+  # Dropout probability applied in the Transformer and in the classifier head.
+  dropout: 0.10
+
+training:
+  batch_size: 64
+  learning_rate: 3.0e-4
+  weight_decay: 1.0e-4
+  num_epochs: 100
+
+  # Maximum L2 norm for gradient clipping (stabilises training).
+  grad_clip_norm: 1.0
+
+  # Label smoothing coefficient for CrossEntropyLoss.
+  label_smoothing: 0.05
+
+augmentation:
+  # Standard deviation of additive Gaussian noise applied per training batch.
+  noise_std: 0.05
+
+  # Probability that a sample receives a circular ±1 time-bin shift.
+  time_jitter_prob: 0.20
+
+output:
+  # Filename for the best-validation-accuracy model checkpoint (.pt).
+  checkpoint_name: "gru_transformer_best.pt"
+
+  # Filename for the training log written to data_dir.
+  log_filename: "training.log"
