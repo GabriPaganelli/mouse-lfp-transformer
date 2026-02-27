@@ -1,0 +1,41 @@
+# =============================================================================
+# .gitignore — mouse-lfp-transformer
+# =============================================================================
+
+# Dataset arrays — too large for git (several GB total)
+*.npy
+
+# Model checkpoints — generated at training time
+*.pt
+
+# Training logs — generated at training time
+*.log
+
+# Error logs from HPC
+*.err
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Claude Code workspace (local editor config — not part of the project)
+.claude/

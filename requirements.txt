@@ -1,0 +1,20 @@
+# Core deep learning
+torch>=2.0
+
+# Data science
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+scikit-learn>=1.3
+
+# Configuration
+pyyaml>=6.0
+
+# Visualisation
+matplotlib>=3.7
+
+# Data acquisition (Allen Brain Observatory)
+allensdk>=2.15
+
+# Notebooks
+jupyter>=1.0
