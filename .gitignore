@@ -36,6 +36,3 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
-
-# Claude Code workspace (local editor config — not part of the project)
-.claude/
