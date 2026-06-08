@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this project, please cite it as below."
+type: software
+title: "Neural Decoding of Visual Stimuli from Mouse LFP Recordings using Transformer-GRU"
+abstract: >
+  Deep learning model for neural decoding of visual stimuli from mouse Local Field
+  Potential (LFP) recordings using data from the Allen Brain Observatory Visual Coding
+  dataset. A Transformer encoder combined with GRU classifies 8 types of visual stimuli
+  from time-binned bandpower features extracted from Neuropixels LFP signals in primary
+  visual cortex (VISp). Achieves 79.9% test accuracy on 8-way classification.
+authors:
+  - family-names: Paganelli
+    given-names: Gabriele
+    affiliation: "University of Padova"
+    email: gabrielepaganelli13@gmail.com
+  - family-names: Angelos
+    given-names: Phillip
+keywords:
+  - deep learning
+  - neural decoding
+  - LFP
+  - Transformer
+  - GRU
+  - visual cortex
+  - Neuropixels
+  - Allen Brain Observatory
+license: MIT
+repository-code: "https://github.com/GabriPaganelli/mouse-lfp-transformer"
+date-released: "2026-06-08"
