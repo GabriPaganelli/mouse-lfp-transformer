@@ -18,7 +18,7 @@ set -euo pipefail
 # Maximum wall-clock time (hh:mm:ss)
 #$ -l h_rt=24:00:00
 
-# RAM per core (96 cores × 8 GB = up to 768 GB total addressable)
+# RAM per core (26 cores × 8 GB = up to 208 GB total addressable)
 #$ -l mem_per_core=8G
 
 # Number of OpenMP threads / CPU cores
@@ -33,6 +33,6 @@ source /share/pkg.8/miniconda/25.3.1/install/etc/profile.d/conda.sh
 conda activate /share/pkg.8/academic-ml/fall-2025/install/fall-2025-pyt
 
 # Move to the project root (where config.yaml lives)
-cd /path/to/
+cd /path/to/mouse-lfp-transformer
 
 python3 scripts/train_gru_transformer.py --config config.yaml

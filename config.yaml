@@ -9,7 +9,7 @@
 data:
   # Path to the directory containing pre-extracted feature .npy files.
   # These are produced by notebooks/03_feature_extraction.ipynb.
-  data_dir: "/path/to/RetreivedData"
+  data_dir: "/path/to/data"
 
   # Allen Brain Observatory session IDs used in this study.
   sessions:
