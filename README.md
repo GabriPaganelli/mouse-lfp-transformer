@@ -2,6 +2,9 @@
 
 [Report (PDF)](mice_lfp_report.pdf) · [Project page](https://gabripaganelli.github.io/projects/mice-lfp.html) · [Dataset](https://allensdk.readthedocs.io/en/latest/visual_coding_neuropixels.html)
 
+![Confusion matrices](figures/confusion_matrices.png)
+*8-class confusion matrices: GRU-Transformer (left) vs linear baseline (right) — report, Fig. 5*
+
 ## Overview
 
 University project applying deep learning to neural decoding of visual stimuli
@@ -43,6 +46,7 @@ mouse-lfp-transformer/
 ├── README.md
 ├── LICENSE
 ├── mice_lfp_report.pdf            # Project report
+├── figures/                       # Confusion-matrix image (README)
 ├── config.yaml                    # All hyperparameters and session IDs
 ├── requirements.txt               # Python dependencies
 ├── scripts/
