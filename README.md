@@ -1,4 +1,4 @@
-# mouse-lfp-transformer
+# Neural Decoding of Visual Stimuli from Mouse LFP Recordings using GRU-Transformer
 
 [Report (PDF)](mice_lfp_report.pdf) · [Project page](https://gabripaganelli.github.io/projects/mice-lfp.html) · [Dataset](https://allensdk.readthedocs.io/en/latest/visual_coding_neuropixels.html)
 

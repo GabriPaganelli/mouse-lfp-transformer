@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this project, please cite it as below."
 type: software
-title: "Neural Decoding of Visual Stimuli from Mouse LFP Recordings using Transformer-GRU"
+title: "Neural Decoding of Visual Stimuli from Mouse LFP Recordings using GRU-Transformer"
 abstract: >
   Deep learning model for neural decoding of visual stimuli from mouse Local Field
   Potential (LFP) recordings using data from the Allen Brain Observatory Visual Coding
