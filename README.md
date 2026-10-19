@@ -1,6 +1,6 @@
 # Neural Decoding of Visual Stimuli from Mouse LFP Recordings using GRU-Transformer
 
-[Report (PDF)](mice_lfp_report.pdf) · [Project page](https://gabripaganelli.github.io/projects/mice-lfp.html) · [Dataset](https://allensdk.readthedocs.io/en/latest/visual_coding_neuropixels.html)
+[Report (PDF)](report.pdf) · [Project page](https://gabripaganelli.github.io/projects/mice-lfp.html) · [Dataset](https://allensdk.readthedocs.io/en/latest/visual_coding_neuropixels.html)
 
 ![Confusion matrices](figures/confusion_matrices.png)
 *8-class confusion matrices: GRU-Transformer (left) vs linear baseline (right) — report, Fig. 5*
@@ -45,7 +45,7 @@ Class imbalance is handled via per-class weighted cross-entropy loss.
 mouse-lfp-transformer/
 ├── README.md
 ├── LICENSE
-├── mice_lfp_report.pdf            # Project report
+├── report.pdf                    # Project report
 ├── figures/                       # Confusion-matrix image (README)
 ├── config.yaml                    # All hyperparameters and session IDs
 ├── requirements.txt               # Python dependencies
